@@ -1,0 +1,245 @@
+
+
+body {
+    padding: 150px 8.33vw;
+    font-family: 'Farro', 'Francois One', 'Roboto', 'Staatliches', 'Tourney', 'PT Sans', sans-serif;
+    overflow: overlay;
+}
+
+a,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+    position: fixed;
+    top: 0;
+    width: 83.33vw;
+    background-color: white;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.header__nav-link,.header__nav p {
+    font-family: 'Staatliches';
+    font-weight: 400;
+    font-size: 22px;
+    height: 20px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+.header__nav p {
+    margin: 0 10px;
+}
+
+.header__lang {
+    text-transform: uppercase;
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-right: 50px;
+}
+
+.main {
+    display: flex;
+    position: relative;
+}
+
+
+.main__sidebar {
+    width: 26.73vw;
+    min-width: 260px;
+    height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    margin-right: 2.08vw;
+}
+
+.main__sidebar-nav {
+    padding: 10px;
+}
+
+
+.main__react-features {
+    width: 54.51vw;
+
+}
+
+.main__sidebar-nav-item {
+    margin-bottom: 70px;
+    border-bottom: 1px solid #BDBDBD;
+    padding: 0 0 10px;
+}
+
+.divider {
+    width: 100px;
+    height: 8px;
+    background: #000000;
+    display: inline-block;
+    margin: 0 0 20px;
+}
+
+.react-feature-titles {
+    display: flex;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.react-feature-title {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-right: 10px;
+}
+
+.main__sidebar-nav-link {
+    margin: 0;
+    letter-spacing: 0.032em;
+}
+
+.react-feature-subtitle {
+    font-family: 'Farro';
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #000000;
+
+}
+.react-feature-description {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 70px;
+}
+
+.react-feature-description p {
+    margin-bottom: 20px;
+}
+
+.react-feature-description p:last-child {
+    margin-bottom: 0;
+}
+
+.react-feature-description--bold {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
+}
+
+.react-feature-description--underline {
+    text-decoration: underline;
+}
+
+.react-feature-description--italic {
+    font-style: italic;
+}
+
+.react-feature-description--background {
+    background-color: #DADADA;
+}
+
+.bg {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.main__bg {
+    position: sticky;
+    top: 80px;
+    z-index: -1;
+}
+
+/* users page */
+
+.main-users__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.main-users__title-title {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+
+.main-users__title-divider {
+    margin: 0 20px 0 0;
+}
+
+.main-users__users-wrapper {
+    border-bottom: 1px solid #BDBDBD;
+    border-top: 1px solid #BDBDBD;
+    padding: 20px 15px;
+}
+.main-users__cards {
+    display: grid;
+    gap: 2.08vw;
+    grid-template-columns: repeat(auto-fill, minmax(270px, auto));
+    justify-items: center;
+
+}
+
+
+.main__users-list-user, .main-users__card {
+    width: 270px;
+    height: 180px;
+    perspective: 1000px;
+}
+
+.main-users__card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.main-users__card:hover .main-users__card-inner {
+    transform: rotateX(-180deg);
+}
+
+.main-users__card-front,
+.main-users__card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.main-users__card-back {
+    transform: rotateX(-180deg);
+}
